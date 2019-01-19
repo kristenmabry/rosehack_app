@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Sugar Calculator</string>
     <string name="teaspoon">Teaspoon</string>
+    <string name="title_logo_dsc">Title Logo</string>
+    <string name="app_dsc">A daily sugar intake calculator</string>
+    <string name="welcome_button">Enter</string>
 </resources>
