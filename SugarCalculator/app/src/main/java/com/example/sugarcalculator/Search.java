@@ -120,7 +120,12 @@ public class Search extends AppCompatActivity {
 
 
             TextView label = new TextView(this);
-            label.setText(name.substring(0, 30) + "...");
+            if (name.length() > 21) {
+                label.setText(name.substring(0, 21) + "...");
+            }
+            else {
+                label.setText(name);
+            }
             label.setTextSize(24);
             label.setPadding(5, 5, 5, 5);
             label.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
