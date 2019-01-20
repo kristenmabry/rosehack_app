@@ -20,6 +20,8 @@
         <activity
             android:name=".NavigationScreen"
             android:parentActivityName=".MainActivity" />
+        <activity android:name=".Capture"
+            android:parentActivityName=".NavigationScreen"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

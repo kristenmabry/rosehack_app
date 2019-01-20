@@ -17,4 +17,9 @@ public class NavigationScreen extends AppCompatActivity {
         Intent intent = new Intent(this, Search.class);
         startActivity(intent);
     }
+
+    public void toCapture(View view) {
+        Intent intent = new Intent(this, Capture.class);
+        startActivity(intent);
+    }
 }
