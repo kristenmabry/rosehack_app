@@ -26,7 +26,7 @@ public class Capture extends AppCompatActivity {
 
 }
 */
-
+/*
 package com.example.sugarcalculator;
 
 import android.Manifest;
@@ -375,3 +375,4 @@ public class Capture extends AppCompatActivity {
     }
 }
 
+*/

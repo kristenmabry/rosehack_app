@@ -153,6 +153,7 @@
         android:layout_marginBottom="8dp"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="monospace"
+        android:onClick="toUserInfo"
         android:text="@string/add_sugar"
         android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
