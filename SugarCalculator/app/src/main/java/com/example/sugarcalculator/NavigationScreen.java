@@ -36,7 +36,7 @@ public class NavigationScreen extends AppCompatActivity {
     public void toCalendar(View view) {
         Intent intent = new Intent(this, DailySugar.class);
         intent.putExtra("amount", 0.0);
-        startActivity(intent);
+        startActivity(intent); // help me. merge please
     }
 
 }
