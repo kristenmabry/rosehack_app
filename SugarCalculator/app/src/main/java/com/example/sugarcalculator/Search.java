@@ -98,6 +98,7 @@ public class Search extends AppCompatActivity {
             }
             TableRow tr = new TableRow(this);
             tr.setId(id);
+            tr.setPadding(5, 5, 5, 5);
 
             if (i % 2 == 0) {
                 tr.setBackgroundColor(getResources().getColor(R.color.colorAccent));
@@ -108,7 +109,10 @@ public class Search extends AppCompatActivity {
 
 
             TextView label = new TextView(this);
-            label.setText(name);
+            label.setText(name.substring(0, 30) + "...");
+            label.setTextSize(24);
+            label.setPadding(5, 5, 5, 5);
+            label.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
 
             tr.addView(label);
             ll.addView(tr, i+1);
