@@ -14,7 +14,6 @@
         android:background="@color/colorAccent"
         android:paddingLeft="124dp"
         android:paddingTop="0dp"
-        android:paddingRight="124dp"
         android:paddingBottom="0dp"
         android:text="@string/teaspoon"
         android:textColor="@color/colorPrimary"

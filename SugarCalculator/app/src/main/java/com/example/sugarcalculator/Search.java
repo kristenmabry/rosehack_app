@@ -75,6 +75,7 @@ public class Search extends AppCompatActivity {
 
     public void createRows(JSONObject response) {
         TableLayout ll = findViewById(R.id.table);
+
         JSONArray arr = new JSONArray();
         try {
             arr = response.getJSONArray("item");

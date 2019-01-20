@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Sugar Calculator</string>
+    <string name="app_name">Teaspoon</string>
     <string name="teaspoon">Teaspoon</string>
     <string name="title_logo_dsc">Title Logo</string>
     <string name="app_dsc">A daily sugar intake calculator</string>
@@ -16,4 +16,7 @@
     <string name="add_sugar">Add Sugar</string>
     <string name="welcome_user">Welcome, User!</string>
     <string name="app_id">rosehackapp-bieqd</string>
+    <string name="here_s_your_sugar_intake_for_today">Here\'s your sugar intake for today:</string>
+    <string name="_0_tsp">0 tsp</string>
+    <string name="to_calendar">Go Back</string>
 </resources>
