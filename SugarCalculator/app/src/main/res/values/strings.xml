@@ -7,4 +7,10 @@
     <string name="widget">Navigation Button</string>
     <string name="daily">Today\'s Sugar Intake: 0 tsp</string>
     <string name="Search">Search\.\.\.</string>
+    <string name="name_header">Name:</string>
+    <string name="sugar_header">Sugar:</string>
+    <string name="serving_amount_label"># of Servings:</string>
+    <string name="serving_amount_num">1.0</string>
+    <string name="total_sugar_amount_tsp">Total Sugar Amount (tsp):</string>
+    <string name="submit">Submit</string>
 </resources>
