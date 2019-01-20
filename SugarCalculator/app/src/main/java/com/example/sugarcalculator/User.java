@@ -1,28 +1,39 @@
+package com.example.sugarcalculator;
+
 public class User {
 
-    private String myUser = "user";
-    private String myPass = "pass";
+    private int myAge;
+    private int myWeight;
+    private int myHeight;
     //units of measure: either 't' for teaspoons or
     //'g' for grams
-    private char myMode = 't';
+    private char myMode;
     //daily sugar intake IN GRAMS
-    private double myTotal = 0;
+    private long myTotal;
 
     // =====================================================
     // constructor
     // =====================================================
-    public User(String user, String pass, char mode)
+    public User(int age, int weight, int height, char mode)
     {
-        myUser = user;
-        myPass = pass;
+        myAge = age;
+        myWeight = weight;
+        myHeight = height;
         myMode = mode;
+        myTotal = 0;
+    }
+
+    public User()
+    {
+        myMode = 't';
+        myTotal = 0;
     }
 
     // =====================================================
     // void addSugar
     // adds amount to total daily sugar intake
     // ====================================================
-    public void addSugar(double amount)
+    public void addSugar(long amount)
     {
         myTotal += amount;
     }

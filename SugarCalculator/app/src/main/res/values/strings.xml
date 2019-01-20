@@ -13,4 +13,7 @@
     <string name="serving_amount_num">1.0</string>
     <string name="total_sugar_amount_tsp">Total Sugar Amount (tsp):</string>
     <string name="submit">Submit</string>
+    <string name="add_sugar">Add Sugar</string>
+    <string name="welcome_user">Welcome, User!</string>
+    <string name="app_id">rosehackapp-bieqd</string>
 </resources>

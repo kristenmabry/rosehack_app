@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".DailySugar">
+
+    <TextView
+        android:id="@+id/logo_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/colorAccent"
+        android:paddingLeft="135dp"
+        android:paddingRight="135dp"
+        android:text="@string/teaspoon"
+        android:textColor="@color/colorPrimary"
+        android:textSize="56sp"
+        app:fontFamily="@font/lemonjelly_copy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="102dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:contentDescription="@string/title_logo_dsc"
+        app:layout_constraintEnd_toEndOf="@+id/logo_text"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/spoon_blue" />
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="monospace"
+        android:text="@string/welcome_user"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_text" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="monospace"
+        android:text="Here's your sugar intake for today:"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome" />
+
+    <rotate xmlns:android="http://schemas.android.com/apk/res/android"
+        android:fromDegrees="270"
+        android:toDegrees="270">
+        <shape
+            android:innerRadiusRatio="2.5"
+            android:shape="ring"
+            android:thickness="5dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="8dp"
+            android:useLevel="true"><!-- this line fixes the issue for lollipop api 21 -->
+
+            <gradient
+                android:angle="0"
+                android:endColor="#007DD6"
+                android:startColor="#007DD6"
+                android:type="sweep"
+                android:useLevel="false" />
+        </shape>
+    </rotate>
+
+    <shape
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:shape="ring"
+        android:innerRadiusRatio="2.5"
+        android:thickness="5dp"
+        android:useLevel="false">
+
+        <solid android:color="@colors/primaryAccent" />
+
+    </shape>
+
+</android.support.constraint.ConstraintLayout>

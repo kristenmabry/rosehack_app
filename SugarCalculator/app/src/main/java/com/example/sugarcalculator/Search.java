@@ -131,11 +131,5 @@ public class Search extends AppCompatActivity {
 
     }
 
-    public void toDetails(View view, String ndbno) {
-        Intent intent = new Intent(this, FoodDetails.class);
-        intent.putExtra("item_id", ndbno);
-        startActivity(intent);
-    }
-
 
 }

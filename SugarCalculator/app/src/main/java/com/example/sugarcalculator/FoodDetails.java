@@ -1,5 +1,6 @@
 package com.example.sugarcalculator;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,6 +21,7 @@ public class FoodDetails extends AppCompatActivity {
 
 
     double sugar;
+    long total_sugar_amount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,10 +100,21 @@ public class FoodDetails extends AppCompatActivity {
 
     public void getSugar(View v) {
         TextView serving_input = findViewById(R.id.serving_input);
-        int servings = Integer.parseInt(serving_input.getText().toString());
+        String input = serving_input.getText().toString();
+        Double servings = Double.parseDouble(input);
         TextView sugar_total = findViewById(R.id.sugar_total);
+        total_sugar_amount = Math.round(sugar * servings / 4.2 * 100) / 100;
         String newText = getResources().getText(R.string.total_sugar_amount_tsp)
-                + Double.toString(sugar * servings / 4.2);
+                + Long.toString(total_sugar_amount);
         sugar_total.setText(newText);
+
+    }
+
+    public void toUserInfo(View v) {
+
+
+
+        Intent intent = new Intent(this, FoodDetails.class);
+        startActivity(intent);
     }
 }
