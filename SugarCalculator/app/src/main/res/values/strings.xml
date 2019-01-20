@@ -7,4 +7,6 @@
     <string name="widget">Navigation Button</string>
     <string name="daily">Today\'s Sugar Intake: 0 tsp</string>
     <string name="Search">Search\.\.\.</string>
+    <string name="name_header">Name:</string>
+    <string name="sugar_header">Sugar:</string>
 </resources>
