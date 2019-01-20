@@ -19,18 +19,18 @@ import org.json.JSONObject;
 public class FoodDetails extends AppCompatActivity {
 
 
-    String item_id;
+    double sugar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_details);
         Bundle b = getIntent().getExtras();
-        item_id = b.getString("item_id");
-        loadFood();
+        String item_id = b.getString("item_id");
+        loadFood(item_id);
     }
 
-    public void loadFood() {
+    public void loadFood(final String item_id) {
 
 
         // Instantiate the RequestQueue.
@@ -47,7 +47,7 @@ public class FoodDetails extends AppCompatActivity {
 
                     @Override
                     public void onResponse(JSONObject response) {
-                        handleJson(response);
+                        handleJson(response, item_id);
                     }
                 }, new Response.ErrorListener() {
 
@@ -62,12 +62,12 @@ public class FoodDetails extends AppCompatActivity {
         queue.add(jsonObjectRequest);
     }
 
-    public void handleJson(JSONObject response) {
+    public void handleJson(JSONObject response, String item_id) {
         JSONObject info;
         String food_title;
         String amount = "";
         JSONArray nutrients;
-        String sugar = "";
+        sugar = 0;
         try {
             info = response.getJSONObject("report");
             nutrients = info.getJSONArray("foods");
@@ -76,7 +76,7 @@ public class FoodDetails extends AppCompatActivity {
             amount = info.getString("measure");
             nutrients = info.getJSONArray("nutrients");
             info = nutrients.getJSONObject(0);
-            sugar = info.getString("value");
+            sugar = Double.valueOf(info.getString("value"));
         }
         catch (JSONException e) {
             food_title = "Error";
@@ -89,8 +89,19 @@ public class FoodDetails extends AppCompatActivity {
         title.setText(food_title);
 
         TextView desc = findViewById(R.id.serving_size);
-        desc.setText("Serving Size: " + amount);
+        String newText = "Serving Size: " + amount;
+        desc.setText(newText);
 
 
+
+    }
+
+    public void getSugar(View v) {
+        TextView serving_input = findViewById(R.id.serving_input);
+        int servings = Integer.parseInt(serving_input.getText().toString());
+        TextView sugar_total = findViewById(R.id.sugar_total);
+        String newText = getResources().getText(R.string.total_sugar_amount_tsp)
+                + Double.toString(sugar * servings / 4.2);
+        sugar_total.setText(newText);
     }
 }
