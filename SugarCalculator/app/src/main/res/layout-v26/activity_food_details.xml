@@ -82,7 +82,7 @@
         app:layout_constraintTop_toBottomOf="@+id/food_name" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/serving_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -99,30 +99,16 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/textView6"
-        android:layout_width="52dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="16dp"
-        android:autofillHints="1.0"
+        android:id="@+id/serving_input"
+        android:layout_width="95dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="12dp"
         android:background="@color/colorAccent"
-        android:hint="@string/serving_amount_num"
         android:inputType="number"
-        android:labelFor="@id/textView5"
-        android:paddingLeft="10dp"
+        android:labelFor="@id/serving_label"
         android:textColor="@android:color/darker_gray"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toEndOf="@+id/serving_label"
         app:layout_constraintTop_toBottomOf="@+id/serving_size"
-        tools:targetApi="o" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textColor="@color/colorPrimaryDark"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="482dp" />
+        android:autofillHints="1.0" />
 
 </android.support.constraint.ConstraintLayout>

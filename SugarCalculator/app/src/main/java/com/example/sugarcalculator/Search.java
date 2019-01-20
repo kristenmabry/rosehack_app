@@ -78,29 +78,38 @@ public class Search extends AppCompatActivity {
         JSONArray arr = new JSONArray();
         try {
             arr = response.getJSONArray("item");
+            TextView results = findViewById(R.id.name_header);
+            results.setText("Name: ");
         }
         catch (JSONException e) {
             TextView results = findViewById(R.id.name_header);
-            results.setText("Response: " + response.toString());
+            results.setText("No Results");
         }
 
 
         for (int i = 0; i < arr.length(); i++) {
             JSONObject obj;
-            int id = 1;
+            String id = "1";
             String name = "name";
             try {
                 obj = arr.getJSONObject(i);
-                id = Integer.parseInt(obj.getString("ndbno"));
+                id = obj.getString("ndbno");
                 name = obj.getString("name");
 
             } catch (JSONException e) {
                 obj = new JSONObject();
             }
             TableRow tr = new TableRow(this);
-            tr.setId(id);
+            tr.setId(Integer.parseInt(id));
             tr.setPadding(5, 5, 5, 5);
-            tr.callOnClick();
+            final String pass_id = id;
+            tr.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Intent intent = new Intent(Search.this, FoodDetails.class);
+                    intent.putExtra("item_id", pass_id);
+                    startActivity(intent);
+                }
+            });
 
             if (i % 2 == 0) {
                 tr.setBackgroundColor(getResources().getColor(R.color.colorAccent));

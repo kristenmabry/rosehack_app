@@ -9,4 +9,6 @@
     <string name="Search">Search\.\.\.</string>
     <string name="name_header">Name:</string>
     <string name="sugar_header">Sugar:</string>
+    <string name="serving_amount_label"># of Servings:</string>
+    <string name="serving_amount_num">1.0</string>
 </resources>
