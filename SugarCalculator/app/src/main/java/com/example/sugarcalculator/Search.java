@@ -1,5 +1,6 @@
 package com.example.sugarcalculator;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -99,6 +100,7 @@ public class Search extends AppCompatActivity {
             TableRow tr = new TableRow(this);
             tr.setId(id);
             tr.setPadding(5, 5, 5, 5);
+            tr.callOnClick();
 
             if (i % 2 == 0) {
                 tr.setBackgroundColor(getResources().getColor(R.color.colorAccent));
@@ -118,6 +120,12 @@ public class Search extends AppCompatActivity {
             ll.addView(tr, i+1);
         }
 
+    }
+
+    public void toDetails(View view, String ndbno) {
+        Intent intent = new Intent(this, FoodDetails.class);
+        intent.putExtra("item_id", ndbno);
+        startActivity(intent);
     }
 
 
