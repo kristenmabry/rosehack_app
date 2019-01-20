@@ -111,10 +111,8 @@ public class FoodDetails extends AppCompatActivity {
     }
 
     public void toUserInfo(View v) {
-
-
-
-        Intent intent = new Intent(this, FoodDetails.class);
+        Intent intent = new Intent(this, DailySugar.class);
+        intent.putExtra("amount", Long.toString(total_sugar_amount));
         startActivity(intent);
     }
 }

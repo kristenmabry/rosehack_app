@@ -1,32 +1,48 @@
 package com.example.sugarcalculator;
 
+import android.util.JsonReader;
+
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class User {
 
     private int myAge;
     private int myWeight;
     private int myHeight;
+    private String myName;
     //units of measure: either 't' for teaspoons or
     //'g' for grams
-    private char myMode;
     //daily sugar intake IN GRAMS
     private long myTotal;
+    private char mySex;
 
     // =====================================================
     // constructor
     // =====================================================
-    public User(int age, int weight, int height, char mode)
+    public User(int age, int weight, int height, String name, char sex)
     {
         myAge = age;
         myWeight = weight;
         myHeight = height;
-        myMode = mode;
+        myName = name;
         myTotal = 0;
+
+
     }
 
     public User()
     {
-        myMode = 't';
-        myTotal = 0;
+
     }
 
     // =====================================================
@@ -51,8 +67,11 @@ public class User {
     // double getTotal
     // returns total sugar intake for the day
     // ====================================================
-    public double getTotal()
+    public long getTotal()
     {
         return myTotal;
     }
+
+
+
 }
