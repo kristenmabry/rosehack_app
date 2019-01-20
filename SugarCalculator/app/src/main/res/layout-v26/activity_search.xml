@@ -9,21 +9,19 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_width="0dp"
+        android:layout_height="76dp"
         android:background="@color/colorAccent"
-        android:paddingLeft="135dp"
-        android:paddingRight="135dp"
+        android:paddingLeft="124dp"
+        android:paddingTop="0dp"
+        android:paddingRight="124dp"
+        android:paddingBottom="0dp"
         android:text="@string/teaspoon"
         android:textColor="@color/colorPrimary"
         android:textSize="56sp"
         app:fontFamily="@font/lemonjelly_copy"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,10 +30,8 @@
         android:layout_width="102dp"
         android:layout_height="27dp"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginEnd="4dp"
         android:contentDescription="@string/title_logo_dsc"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintHorizontal_bias="0.0"
@@ -48,10 +44,9 @@
         android:layout_width="@dimen/SearchBar"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="52dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
         android:autofillHints="Search..."
         android:background="@color/colorAccent"
         android:hint="@string/Search"
@@ -61,10 +56,12 @@
         android:paddingEnd="112dp"
         android:textColor="@color/colorBackground"
         app:fontFamily="monospace"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/search_button"
@@ -78,13 +75,10 @@
 
     <ScrollView
         android:layout_width="395dp"
-        android:layout_height="473dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="364dp"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,7 +93,9 @@
             <TableLayout
                 android:id="@+id/table"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="277dp">
 
                 <TableRow
                     android:id="@+id/table_header"
