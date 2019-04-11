@@ -1,5 +1,5 @@
-# rosehack_app
+# Teaspoon
 
-API with android studio: https://www.androidauthority.com/use-remote-web-api-within-android-app-617869/
-MongoDB with android studio: https://docs.mongodb.com/stitch/tutorials/todo-android/
-Food Composition API database: https://ndb.nal.usda.gov/ndb/doc/index#
+Teaspoon is an Android app that tracks a user's daily sugar intake in teaspoons in order for them to better visualize the amount.
+
+The app uses the USDA's Food Composition API in order to get the sugar content of items searched on the app.
