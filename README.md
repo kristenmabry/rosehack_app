@@ -6,4 +6,9 @@ The app uses the USDA's Food Composition API in order to get the sugar content o
 
 It was built in Android Studio which uses Java.
 
+![alt text](https://github.com/kristenmabry/rosehack_app/blob/master/main_screen.jpg)
+
+![alt text](https://github.com/kristenmabry/rosehack_app/blob/master/search.jpg)
+
+![alt text](https://github.com/kristenmabry/rosehack_app/blob/master/sugar.jpg)
 
