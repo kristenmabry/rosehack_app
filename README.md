@@ -4,7 +4,7 @@ Teaspoon is an Android app that tracks a user's daily sugar intake in teaspoons 
 
 The app uses the USDA's Food Composition API in order to get the sugar content of items searched on the app.
 
-It was built in Android Studio which uses Java.
+It was built in Android Studio which uses Java for Rose Hack 2019.
 
 ![alt text](https://github.com/kristenmabry/rosehack_app/blob/master/main_screen.jpg)
 
